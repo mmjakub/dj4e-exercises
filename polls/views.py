@@ -6,6 +6,9 @@ from django.views import generic
 
 from .models import Choice, Question
 
+def owner(req):
+    return HttpResponse("Hello, world. 2b12fa2d is the polls owner.")
+
 class IndexView(generic.ListView):
     template_name = 'polls/index.html'
     context_object_name = 'latest_question_list'

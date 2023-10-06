@@ -6,8 +6,8 @@
 {% for make in make_list %}
 <li>
     {{ make }}
-    <a href="{% url 'autos:make_update' make.pk %}">edit</a>
-    <a href="{% url 'autos:make_delete' make.pk %}">delete</a>
+    <a href="{% url 'autos:make_update' make.pk %}">Update</a>
+    <a href="{% url 'autos:make_delete' make.pk %}">Delete</a>
 </li>
 {% endfor %}
 </ul>

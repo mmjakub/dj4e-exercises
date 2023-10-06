@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Autos List</h1>
+{% if auto_list %}
+<ul>
+{% for auto in auto_list %}
+<li>{{ auto }}
+    <a href="{% url 'autos:auto_update' auto.pk %}">edit</a>
+    <a href="{% url 'autos:auto_delete' auto.pk %}">delete</a>
+</li>
+{% endfor %}
+</ul>
+{% else %}
+<p>No Autos in database!</p>
+{% endif %}
+<p>
+{% if make_count > 0 %}
+<a href="{% url 'autos:auto_create' %}">Add an Auto</a>
+{% else %}
+Please add a make first.
+{% endif %}
+</p>
+<p>
+<a href="{% url 'autos:make_list' %}">View Makes</a>
+<a href="{% url 'autos:make_create' %}">Add a Make</a>
+</p>
+{% endblock %}

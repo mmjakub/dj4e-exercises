@@ -32,7 +32,7 @@ class MakeListView(LoginRequiredMixin, ListView):
 class MakeEditViewMixin(LoginRequiredMixin):
     model = Make
     fields = '__all__'
-    success_url = reverse_lazy('autos:make_list')
+    success_url = reverse_lazy('autos:auto_list')
 
 class MakeCreateView(MakeEditViewMixin, CreateView): pass
 class MakeDeleteView(MakeEditViewMixin, DeleteView): pass

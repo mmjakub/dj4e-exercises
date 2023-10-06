@@ -5,8 +5,8 @@
 <ul>
 {% for auto in auto_list %}
 <li>{{ auto }}
-    <a href="{% url 'autos:auto_update' auto.pk %}">edit</a>
-    <a href="{% url 'autos:auto_delete' auto.pk %}">delete</a>
+    <a href="{% url 'autos:auto_update' auto.pk %}">Update</a>
+    <a href="{% url 'autos:auto_delete' auto.pk %}">Delete</a>
 </li>
 {% endfor %}
 </ul>
@@ -15,13 +15,14 @@
 {% endif %}
 <p>
 {% if make_count > 0 %}
-<a href="{% url 'autos:auto_create' %}">Add an Auto</a>
+<a href="{% url 'autos:auto_create' %}">Add an auto</a>
 {% else %}
 Please add a make first.
 {% endif %}
 </p>
 <p>
 <a href="{% url 'autos:make_list' %}">View Makes</a>
-<a href="{% url 'autos:make_create' %}">Add a Make</a>
+({{ make_count }}) | 
+<a href="{% url 'autos:make_create' %}">Add a make</a>
 </p>
 {% endblock %}

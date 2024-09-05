@@ -26,10 +26,12 @@ except KeyError as e:
     DEBUG = False
     print("Could not find DJANGO_DEBUG in environment, assuming DEBUG=False")
 
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-
 ALLOWED_HOSTS = []
+try:
+    ALLOWED_HOSTS.append(os.environ["DJANGO_HOST"])
+except KeyError as e:
+    print("Could not find DJANGO_HOST in environment assuming ALLOWED_HOSTS=[]")
+
 
 
 # Application definition

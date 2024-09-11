@@ -18,3 +18,6 @@ def results(request, question_id):
 
 def vote(request, question_id):
     return HttpResponse(f"You're voting on question {question_id}.")
+
+def owner(request):
+    return HttpResponse('Hello, this is 2b12fa2d.')

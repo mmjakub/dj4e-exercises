@@ -37,6 +37,7 @@ except KeyError as e:
 # Application definition
 
 INSTALLED_APPS = [
+    'cats.apps.CatsConfig',
     'autos.apps.AutosConfig',
     'polls.apps.PollsConfig',
     'home.apps.HomeConfig',

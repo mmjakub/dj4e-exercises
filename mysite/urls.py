@@ -9,6 +9,7 @@ SITE_ROOT = os.path.join(BASE_DIR, 'site')
 
 urlpatterns = [
     path('', include('home.urls')),
+    path('cats/', include('cats.urls')),
     path('autos/', include('autos.urls')),
     path('accounts/', include('django.contrib.auth.urls')),
     path('hello/', include('hello.urls')),

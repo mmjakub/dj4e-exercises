@@ -1,0 +1,10 @@
+{% extends "cats/base.html" %}
+{% block content %}
+{% if cat_list %}
+<ul class="list-group">
+    {% for cat in cat_list %}<li class="list-group-item">{{ cat }}</li>{% endfor %}
+</ul>
+{% else %}
+<h2>No cats yet.</h2>
+{% endif %}
+{% endblock %}

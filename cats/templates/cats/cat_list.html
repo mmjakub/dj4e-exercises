@@ -6,7 +6,7 @@
   <li class="list-group-item d-flex flex-wrap align-items-center text-break">
     {{ cat }}
     <div class="ms-auto btn-group">
-      <a class="btn btn-primary" href="{% url 'cats:cat_update' cat.id %}">Edit</a>
+      <a class="btn btn-primary" href="{% url 'cats:cat_update' cat.id %}">Update</a>
       <a class="btn btn-danger" href="{% url 'cats:cat_delete' cat.id %}">Delete</a>
     </div>
   </li>{% endfor %}
@@ -15,12 +15,12 @@
 <h2>No cats yet.</h2>
 {% endif %}
 {% if breed_count %}
-<a class="btn btn-primary" href="{% url 'cats:cat_create' %}">Add a Cat</a>
+<a class="btn btn-primary" href="{% url 'cats:cat_create' %}">Add a cat</a>
 {% else %}
 <h2>Add some breeds first</h2>
 {% endif %}
 <div class="btn-group">
-<a class="btn btn-primary" href="{% url 'cats:breed_create' %}">Add a Breed</a>
-<a class="btn btn-primary" href="{% url 'cats:breed_list' %}">View Breeds ({{breed_count}})</a>
+<a class="btn btn-primary" href="{% url 'cats:breed_create' %}">Add a breed</a>
+<a class="btn btn-primary" href="{% url 'cats:breed_list' %}">View breeds ({{breed_count}})</a>
 </div>
 {% endblock %}

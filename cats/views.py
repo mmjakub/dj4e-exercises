@@ -19,7 +19,7 @@ class CatListView(LoginRequiredMixin, ListView):
 class BreedMixin:
     model = Breed
     fields = '__all__'
-    success_url = reverse_lazy('cats:breed_list')
+    success_url = reverse_lazy('cats:index')
 
 class BreedCreateView(BreedMixin, LoginRequiredMixin, CreateView):
     pass

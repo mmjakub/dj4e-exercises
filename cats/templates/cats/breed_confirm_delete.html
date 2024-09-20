@@ -1,0 +1,11 @@
+{% extends "cats/base.html" %}
+{% block content %}
+<h2>Really delete {{ breed }}?</h2>
+<form action="" method="POST">
+  {% csrf_token %}
+  <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+    <button type="submit" class="btn btn-danger">Yes, Delete</button>
+    <button type="button" class="btn btn-primary" onclick="navigation.back()">Cancel</button>
+  </div>
+</form>
+{% endblock %}

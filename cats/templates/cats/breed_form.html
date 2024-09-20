@@ -1,0 +1,13 @@
+{% extends "cats/base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+<form action="" method="post">
+  <legend>Add a new breed</legend>
+  {% csrf_token %}
+  {{ form|crispy }}
+  <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+    <button type="submit" class="btn btn-success">Submit</button>
+    <button type="button" onclick="navigation.back()" class="btn btn-danger">Cancel</button>
+  </div>
+</form>
+{% endblock %}
